@@ -14,7 +14,7 @@ Filtrar información de forma dinámica
 
  Requisitos
 
-Antes de levantar el proyecto asegúrate de tener instalado:
+Antes de levantar el proyecto debemos tener instalado las siguientes herramientas:
 
 .NET SDK 7 o superior
 
@@ -28,7 +28,7 @@ Visual Studio 2022
 
 Git
 
- Base de Datos (MUY IMPORTANTE)
+ Base de Datos 
 
 En la raíz del proyecto se incluye el archivo:
 
@@ -45,17 +45,17 @@ Relaciones (FOREIGN KEY)
 
 Datos iniciales
 
- PASO OBLIGATORIO
+ PASOS
 
 Antes de ejecutar el backend:
 
-Abre SQL Server Management Studio
+Abrimos SQL Server Management Studio
 
-Ejecuta el archivo database.sql
+Ejecutar el archivo database.sql
 
-Verifica que existan las tablas y datos
+Verificar que existan las tablas y datos
 
-Si no haces esto, el backend no va a funcionar, así de simple.
+Si no realizamos esto, el backend no va a funcionar.
 
  Ejecución del Backend (.NET)
 
