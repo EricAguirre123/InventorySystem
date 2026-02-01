@@ -1,0 +1,55 @@
+<div class="page-header">
+  <h2>Nuevo Producto</h2>
+</div>
+
+
+<div class="form-card">
+  <form [formGroup]="productForm" (ngSubmit)="save()">
+
+    <div class="form-row">
+      <label>Nombre</label>
+      <input type="text" formControlName="name" />
+      <small *ngIf="productForm.get('name')?.invalid && productForm.get('name')?.touched">
+        Nombre requerido
+      </small>
+    </div>
+
+    <div class="form-row">
+        <label>Descripción</label>
+        <textarea rows="3" formControlName="description"></textarea>
+      </div>
+
+      <div class="form-row">
+        <label>Categoría</label>
+        <input type="text" formControlName="category" />
+      </div>
+
+    <div class="form-row">
+      <label>Precio</label>
+      <input type="number" formControlName="price" min="0" />
+      <small *ngIf="productForm.get('price')?.invalid && productForm.get('price')?.touched">
+        Precio inválido
+      </small>
+    </div>
+
+    <div class="form-row">
+      <label>Stock inicial</label>
+      <input type="number" formControlName="stock" min="0" />
+      <small *ngIf="productForm.get('stock')?.invalid && productForm.get('stock')?.touched">
+        Stock inválido
+      </small>
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" class="btn primary" [disabled]="productForm.invalid">
+        Guardar
+      </button>
+
+      <button type="button" class="btn secondary" (click)="cancel()">
+        Cancelar
+      </button>
+    </div>
+  </form>
+</div>
+
+

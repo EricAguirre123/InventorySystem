@@ -1,0 +1,61 @@
+<div class="page-header">
+  <h2>Productos</h2>
+</div>
+
+
+<div class="toolbar">
+  <div class="toolbar-left">
+    <button class="btn primary" (click)="createProduct()"> Nuevo Producto</button>
+    <button class="btn secondary" (click)="goToTransactions()">Ver Transacciones</button>
+  </div>
+</div>
+
+<div *ngIf="loading">Cargando productos...</div>
+
+<div *ngIf="error" class="error">
+  {{ error }}
+</div>
+
+<table class="product-table" *ngIf="products.length > 0">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Precio</th>
+      <th>Stock</th>
+      <th class="center">Acciones</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let p of products">
+      <td>{{ p.id }}</td>
+      <td class="name">{{ p.name }}</td>
+      <td>{{ p.price | currency }}</td>
+
+      <td>
+        <span
+          class="stock-badge"
+          [ngClass]="{
+            low: p.stock < 5,
+            medium: p.stock >= 5 && p.stock < 10,
+            ok: p.stock >= 10
+          }"
+        >
+          {{ p.stock }}
+        </span>
+      </td>
+
+      <td class="center">
+        <button class="btn edit" (click)="editProduct(p.id)">Editar</button>
+        <button class="btn delete" (click)="deleteProduct(p.id)">Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div *ngIf="!loading && products.length === 0">
+  No hay productos registrados.
+</div>
+
+

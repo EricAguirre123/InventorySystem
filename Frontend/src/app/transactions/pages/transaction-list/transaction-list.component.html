@@ -1,0 +1,44 @@
+<div class="page-header">
+  <h2>Transacciones</h2>
+</div>
+
+
+<button (click)="goHome()">Inicio</button>
+<button (click)="newTransaction()">Nueva Transacción</button>
+
+
+<div *ngIf="loading">Cargando transacciones...</div>
+<div *ngIf="error" class="error">{{ error }}</div>
+
+<div class="table-container">
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Producto</th>
+        <th>Tipo</th>
+        <th>Cantidad</th>
+        <th>Precio Unitario</th>
+        <th>Total</th>
+        <th>Fecha</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let t of transactions">
+        <td>{{ t.id }}</td>
+        <td>{{ t.productId }}</td>
+        <td>
+          <span
+            class="badge"
+            [ngClass]="t.transactionType === 'Venta' ? 'badge-sale' : 'badge-buy'">
+            {{ t.transactionType }}
+          </span>
+        </td>
+        <td>{{ t.quantity }}</td>
+        <td>{{ t.unitPrice | currency }}</td>
+        <td>{{ t.totalPrice | currency }}</td>
+        <td>{{ t.transactionDate | date:'short' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
