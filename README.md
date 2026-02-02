@@ -146,16 +146,24 @@ Las siguientes pantallas forman parte de la solución:
  Listado dinámico de transacciones
 <img width="1933" height="1066" alt="image" src="https://github.com/user-attachments/assets/2a4ab9e5-fe6e-4860-a714-05c8857eeb35" />
 
- Pantalla de creación de productos
+ Pantalla de creación de productos.
 <img width="1469" height="875" alt="image" src="https://github.com/user-attachments/assets/912f5030-7702-40da-a8f7-1d42e48e82b4" />
 
- Pantalla de editar de productos
+ Pantalla de editar de productos.
 <img width="1882" height="64" alt="image" src="https://github.com/user-attachments/assets/4527e8fa-5f53-4396-bc4b-4526a7b6ebb5" />
 <img width="782" height="787" alt="image" src="https://github.com/user-attachments/assets/f5c28fa6-2936-432e-9782-b0bfe3e312a8" />
 <img width="1911" height="71" alt="image" src="https://github.com/user-attachments/assets/8104f26a-7346-4b66-921f-3e69be255c02" />
 
- Pantalla de creación de transacciones
+ Pantalla de creación de transacciones.
 <img width="849" height="790" alt="image" src="https://github.com/user-attachments/assets/c59270cf-4099-44dd-b96a-2c127babb08d" />
+
+Pantalla de filtros dinámicos.
+<img width="650" height="581" alt="image" src="https://github.com/user-attachments/assets/515801b3-9de2-4b28-a4ae-6b3b69e99707" />
+
+<img width="595" height="591" alt="image" src="https://github.com/user-attachments/assets/f4d041de-717c-4e7c-b25b-bdd360571439" />
+
+Base de Datos SQL:
+<img width="1235" height="1112" alt="image" src="https://github.com/user-attachments/assets/377760af-738a-4153-b649-17f78d5e2bdf" />
 
 La arquitectura está separada por responsabilidades
 
